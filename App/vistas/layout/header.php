@@ -19,49 +19,48 @@
             font-size: 22px;
             font-family:'Burbank Big';
         }
-
     </style>
 </head>
 
 <body>
-    <div class="container">
+
+    <div class="container" id="cont">
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-light">
                     <div class="container-fluid">
-                        Empresa
+                        <h3 class="col-md-12 text-center">Sistema de Gestion Universitaria</h3>
                     </div>
                 </nav>
-
             </div>
-
         </div>
 <div class="row">
     <div class="col">
 
                 <?php 
-                echo "<li><a href='index.php?bienvenido'>Inicio</a></li>";
+                echo "<a class='form-control mb-2' href='index.php?bienvenido'>Inicio</a>";
                 switch ($_SESSION["tipo"]) {
+
                     case "profesor":
-                        echo "Profesor
-                        <li><a href='index.php?ver-cursos-a-cargo'>Ver Cursos a Cargo</a></li>";
+                        echo "
+                        <a class='form-control mb-2' href='index.php?ver-cursos-a-cargo'>Ver Cursos a Cargo</a>";
                         break;
 
                     case "estudiante":
-                        echo "Estudiante
-                        <li><a href='index.php?ver-notas-estudiante'>Ver Notas</a></li>
-                        <li><a href='index.php?ver-matricula-estudiante'>Ver Matricula</a></li>";
+                        echo "
+                        <a class='form-control mb-2' href='index.php?ver-notas-estudiante'>Ver Notas</a>
+                        <a class='form-control mb-2' href='index.php?ver-matricula-estudiante'>Ver Matricula</a>";
                         break;
                     
                     case "administrador":
-                        echo "Administrador
-                        <li><a href='index.php?crear-usuarios'>Crear Usuarios</a></li>
-                        <li><a href='index.php?crear-plan-de-estudios'>Crear Plan de Estudios</a></li>
-                        <li><a href='index.php?asignar-cursos'>Asignar Cursos</a></li>";
+                        echo "
+                        <a class='form-control mb-2' href='index.php?crear-usuarios'>Crear Usuarios</a>
+                        <a class='form-control mb-2' href='index.php?crear-plan-de-estudios'>Crear Plan de Estudios</a>
+                        <a class='form-control mb-2' href='index.php?asignar-cursos'>Asignar Cursos</a>";
                         break;
                 }
 
-                echo "<li><a href='logout.php'>salir</a></li>";
+                echo "<a class='btn btn-outline-dark' href='logout.php'>salir</a>";
 
            ?>
 </div>
