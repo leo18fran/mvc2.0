@@ -6,9 +6,13 @@ include_once "layout/login.php";
     <h1 class="log-3">Iniciar Sesión</h1>
     <form method="post" action="index.php?login">
         <div class="container">
+            <h2>Codigo</h2>
             <input class="form-control mb-2" type="text" name="codigo" placeholder="Ingrese su Codigo"><br>
+            <h2>Contraseña</h2>
             <input class="form-control mb-2" type="text" name="pass" placeholder="Ingrese su Contraseña"><br>
+            <center>
             <input class="btn btn-outline-dark" type="submit" name="submit" value="Iniciar Sesión"><br>
+            </center>
         </div>
     </form>
     <style>
