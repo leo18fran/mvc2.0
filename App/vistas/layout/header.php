@@ -61,7 +61,7 @@
                         break;
                 }
 
-                echo "<li><a href='logout.php'>salir</a><li>";
+                echo "<li><a href='logout.php'>salir</a></li>";
 
            ?>
 </div>
